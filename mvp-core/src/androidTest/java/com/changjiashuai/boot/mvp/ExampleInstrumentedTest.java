@@ -1,4 +1,4 @@
-package com.changjiashuai.mvp;
+package com.changjiashuai.boot.mvp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

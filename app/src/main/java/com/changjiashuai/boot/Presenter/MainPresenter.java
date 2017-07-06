@@ -1,7 +1,7 @@
 package com.changjiashuai.boot.Presenter;
 
 import com.changjiashuai.boot.View.MainView;
-import com.changjiashuai.mvp.core.SimplePresenter;
+import com.changjiashuai.boot.mvp.core.SimplePresenter;
 
 /**
  * Email: changjiashuai@gmail.com

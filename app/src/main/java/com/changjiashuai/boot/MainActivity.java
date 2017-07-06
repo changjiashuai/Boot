@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.changjiashuai.boot.Presenter.MainPresenter;
 import com.changjiashuai.boot.View.MainView;
-import com.changjiashuai.mvp.core.BaseActivity;
+import com.changjiashuai.boot.mvp.core.BaseActivity;
 
 public class MainActivity extends BaseActivity<MainView, MainPresenter>
         implements MainView {

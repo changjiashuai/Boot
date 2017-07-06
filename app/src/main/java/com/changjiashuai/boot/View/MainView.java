@@ -1,6 +1,6 @@
 package com.changjiashuai.boot.View;
 
-import com.changjiashuai.mvp.core.BaseView;
+import com.changjiashuai.boot.mvp.core.BaseView;
 
 /**
  * Email: changjiashuai@gmail.com

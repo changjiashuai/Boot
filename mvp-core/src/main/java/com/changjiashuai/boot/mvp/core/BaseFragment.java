@@ -1,4 +1,4 @@
-package com.changjiashuai.mvp.core;
+package com.changjiashuai.boot.mvp.core;
 
 import android.app.Fragment;
 import android.os.Bundle;
