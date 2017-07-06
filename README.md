@@ -6,7 +6,8 @@
 [![Star](https://img.shields.io/github/stars/changjiashuai/Boot.svg)]()
 
 Android Project Bootstrap.
-
+- mvp-core
+- mvp-bindview-butterknife
 
 ## Requirements
 - Android SDK 21+
