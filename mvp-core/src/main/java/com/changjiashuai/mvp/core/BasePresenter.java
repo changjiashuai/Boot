@@ -1,0 +1,13 @@
+package com.changjiashuai.mvp.core;
+
+/**
+ * Email: changjiashuai@gmail.com
+ *
+ * Created by CJS on 2017/7/6 11:19.
+ */
+
+public interface BasePresenter<V extends BaseView> {
+    void attachView(V view);
+
+    void detachView();
+}
