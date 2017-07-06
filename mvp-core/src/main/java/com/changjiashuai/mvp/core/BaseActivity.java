@@ -15,11 +15,12 @@ public abstract class BaseActivity<V extends BaseView, T extends BasePresenter<V
 
     protected T mPresenter;
 
-    public abstract void setPresenter(T presenter);
+    public abstract void initPresenter();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initPresenter();
         mPresenter.attachView((V) this);
     }
 

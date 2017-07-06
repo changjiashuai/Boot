@@ -13,14 +13,14 @@ import android.widget.Toast;
 
 public abstract class BaseFragment<V extends BaseView, T extends BasePresenter<V>> extends Fragment implements BaseView {
 
-
     protected T mPresenter;
 
-    public abstract void setPresenter(T presenter);
+    public abstract void initPresenter();
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        initPresenter();
         mPresenter.attachView((V) this);
     }
 
