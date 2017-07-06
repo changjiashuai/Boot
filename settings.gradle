@@ -1,1 +1,1 @@
-include ':app', ':mvp-core'
+include ':app', ':mvp-core', ':mvp-bindview-butterknife'
