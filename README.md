@@ -80,7 +80,7 @@ public class MainActivity extends BaseActivity<MainView, MainPresenter>
 We’d be really happy if you sent me links to your projects where you use our component. Just send an email to changjiashuai@gmail.com And do let me know if you have any questions or suggestion regarding the libs. 
 
 
-##License
+## License
 
     The MIT License (MIT)
 
