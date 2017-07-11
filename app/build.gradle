@@ -29,4 +29,7 @@ dependencies {
     compile project(':mvp-bindview-butterknife')
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile project(':widget-carousel')
+    compile project(':widget-indicator')
+    compile 'com.android.support:support-fragment:25.3.1'
 }
