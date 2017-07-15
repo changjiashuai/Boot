@@ -1,1 +1,1 @@
-include ':app', ':mvp-core', ':mvp-bindview-butterknife', ':cache', ':cache-core', ':widget-carousel', ':widget-indicator'
+include ':app', ':mvp-core', ':mvp-bindview-butterknife', ':cache', ':cache-core', ':widget-carousel', ':widget-indicator', ':mvp-core-compat'
