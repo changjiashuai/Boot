@@ -6,145 +6,18 @@
 [![Star](https://img.shields.io/github/stars/changjiashuai/Boot.svg)]()
 
 Android Project Bootstrap.
-- mvp-core
-- mvp-bindview-butterknife
+- [mvp-core](/mvp-core/README.md)
+- [mvp-bindview-butterknife](mvp-bindview-butterknife/README.md)
+- [mvp-core-compat](mvp-core-compat/README.md)
+- [mvp-core-compat-butterknife](/mvp-core-compat-butterknife/README.md)
 
 ## Requirements
 - Android SDK 21+
 
 
-## Usage
-
-# `mvp-core`
-
-Add the dependency:
-```Groovy
-dependencies {
-	compile 'com.changjiashuai.boot:mvp-core:1.0.0'
-}
-```
-
-## How to use this library
-
-* Create view interface extends BaseView for your view
-```java
-public interface MainView extends BaseView {
-}
-```
-
-* Create presenter extends BasePresenter need to impl attachView(V view) and detachView() or extends default SimplePresenter<V> not need to deal view attach and detach for your business logic with your view
-```java
-public class MainPresenter<V extends BaseView> implements BasePresenter<V> {
-
-    protected V mView;
-
-    @Override
-    public void attachView(V view) {
-        mView = view;
-    }
-
-    @Override
-    public void detachView() {
-        mView = null;
-    }
-}
-```
-```java
-public class MainPresenter extends SimplePresenter<MainView> {
-
-}
-```
-* Create Activity(Fragment) extends BaseActivity(BaseFragment) and initialize presenter in your Activity
-```java
-public class MainActivity extends BaseActivity<MainView, MainPresenter>
-        implements MainView {
-
-    @Override
-    public void initPresenter() {
-        mPresenter = new MainPresenter();
-    }
-    
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-	}
-        
-    ...
-}
-```
-    
-# `mvp-bindview-butterknife`
-
-Add the dependency:
-```Groovy
-dependencies {
-	compile 'com.changjiashuai.boot:mvp-bindview-butterknife:1.0.0'
-	compile 'com.jakewharton:butterknife:8.6.0'
-	annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
-}
-```
-
-## How to use this library
-
-* Create Activity(Fragment) extends ButterKnifeActivity(BaseFragment) and initialize presenter in your Activity
-```java
-public class MainActivity extends ButterKnifeActivity<MainView, MainPresenter>
-        implements MainView, MainFragment.OnFragmentInteractionListener {
-
-    private static final String TAG = "MainActivity";
-
-    @Override
-    public void initPresenter() {
-        mPresenter = new MainPresenter();
-    }
-
-    @Override
-    protected void initContentView() {
-        setContentView(R.layout.activity_main);
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @OnClick(R.id.btn_test)
-    void onButtonClick() {
-        Log.i(TAG, "onButtonClick: ");
-        showMessage("test from activity");
-    }
-
-    @Override
-    public void showLoading() {
-
-    }
-
-    @Override
-    public void hideLoading() {
-
-    }
-
-    @Override
-    public void showRetry() {
-
-    }
-
-    @Override
-    public void hideRetry() {
-
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
-}
-```
-
 ## Let me know!
 
-I'd be really happy if you sent me links to your projects where you use our component. Just send an email to changjiashuai@gmail.com And do let me know if you have any questions or suggestion regarding the libs. 
+I'd be really happy if you sent me links to your projects where you use my component. Just send an email to changjiashuai@gmail.com And do let me know if you have any questions or suggestion regarding the libs.
 
 
 ## License
@@ -170,4 +43,3 @@ I'd be really happy if you sent me links to your projects where you use our comp
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
-    
