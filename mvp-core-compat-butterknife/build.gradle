@@ -26,8 +26,10 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    provided 'com.android.support:appcompat-v7:26.+'
+    compile project(':mvp-core-compat')
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
     testCompile 'junit:junit:4.12'
 }
 
-//apply from: "bintray.gradle"
+apply from: "bintray.gradle"
